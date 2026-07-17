@@ -29,3 +29,29 @@ body {
   --cursor-bg: rgba(124, 58, 237, 0.08);
   --cursor-glow: rgba(124, 58, 237, 0.3);
 }
+
+
+/* ─── GLOBAL HORIZONTAL OVERFLOW FIX ─── */
+html, 
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* মোবাইলে ডেকোরেটিভ গ্লো বা আন-ইন্টেনশনাল এলিমেন্টকে স্ক্রিন পুশ করা থেকে আটকানো */
+@media (max-width: 768px) {
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
