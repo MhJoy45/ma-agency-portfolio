@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+/* ➔ Tailwind v4 এর জন্য ডার্ক মোড স্ট্রাকচার সেট করা */
+@variant dark (&:where(.dark, .dark *));
+@variant light (&:where(.light, .light *));
+
+@theme {
+  --color-brand-dark: #060413;
+  --color-brand-light: #f8fafc;
+  --color-brand-purple: #7c3aed;
+  --color-brand-lime: #a3e635;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* ডিফল্ট ডার্ক মোড ভ্যারিয়েবল */
+:root {
+  --cursor-color: #a3e635;
+  --cursor-bg: rgba(163, 230, 21, 0.08);
+  --cursor-glow: rgba(163, 230, 21, 0.3);
+}
+
+/* লাইট মোড ভ্যারিয়েবল অ্যাক্টিভেশন */
+.light {
+  --cursor-color: #7c3aed;
+  --cursor-bg: rgba(124, 58, 237, 0.08);
+  --cursor-glow: rgba(124, 58, 237, 0.3);
+}
